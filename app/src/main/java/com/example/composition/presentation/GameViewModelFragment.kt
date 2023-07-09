@@ -14,10 +14,13 @@ import com.example.composition.domain.entity.Question
 import com.example.composition.domain.usecases.GenerateQuestionUseCase
 import com.example.composition.domain.usecases.GetGameSettingsUseCase
 
-class GameViewModelFragment(application: Application) : AndroidViewModel(application) {
+class GameViewModelFragment(
+    private val application: Application,
+    private val level: Level
+) : AndroidViewModel(application) {
 
     private lateinit var gameSettings: GameSettings
-    private lateinit var level: Level
+
 
     private val context = application
 
@@ -63,10 +66,15 @@ class GameViewModelFragment(application: Application) : AndroidViewModel(applica
     private var countOfRightAnswers = 0
     private var countOfQuestions = 0
 
-    fun startGame(level: Level) {
+
+    init{
+        startGame()
+    }
+   private fun startGame() {
         getGameSettings(level)
         startTimer()
         generateQuestion()
+        updateProgress()
     }
 
     fun chooseAnswer(number: Int) {
@@ -90,6 +98,9 @@ class GameViewModelFragment(application: Application) : AndroidViewModel(applica
     }
 
     private fun calculatePercentOfRightAnswers(): Int {
+        if (countOfQuestions == 0) {
+            return 0
+        }
         return ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
     }
 
@@ -102,7 +113,6 @@ class GameViewModelFragment(application: Application) : AndroidViewModel(applica
     }
 
     private fun getGameSettings(level: Level) {
-        this.level = level
         this.gameSettings = getGameSettingsUseCase(level)
         _minPercent.value = gameSettings.minPercentOfRightAnswers
     }
