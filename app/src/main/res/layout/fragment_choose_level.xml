@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/level"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".presentation.ChooseLevelFragment">
+<layout>
 
-    <TextView
-        android:id="@+id/tv_titlee"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/level"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/text_choose"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.ChooseLevelFragment">
 
-    <Button
-        android:id="@+id/button_level_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#EBBA09"
-        android:text="@string/test_level"
-        tools:ignore="DuplicateIds" />
-    <Button
-        android:id="@+id/button_level_easy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/easy_level"
-        android:backgroundTint="#F5AB0A"
-        tools:ignore="DuplicateIds" />
-    <Button
-        android:id="@+id/button_level_normal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#F5710A"
-        android:text="@string/normal_level"
-        tools:ignore="DuplicateIds" />
-    <Button
-        android:id="@+id/button_level_hard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#EB4B09"
-        android:text="@string/hard_level"
-        tools:ignore="DuplicateIds" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_titlee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/text_choose"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_level_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#EBBA09"
+            android:text="@string/test_level"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/button_level_easy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#F5AB0A"
+            android:text="@string/easy_level"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/button_level_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#F5710A"
+            android:text="@string/normal_level"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/button_level_hard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#EB4B09"
+            android:text="@string/hard_level"
+            tools:ignore="DuplicateIds" />
+    </LinearLayout>
+</layout>

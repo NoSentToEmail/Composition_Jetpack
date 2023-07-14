@@ -21,7 +21,7 @@ class WelcomeFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): ScrollView {
+    ): View {
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return binding.root
     }
